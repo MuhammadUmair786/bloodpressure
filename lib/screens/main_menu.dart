@@ -1,6 +1,7 @@
 import 'package:bloodpressure/constants.dart';
 import 'package:bloodpressure/screens/about_us.dart';
 import 'package:bloodpressure/screens/data_entry.dart';
+import 'package:bloodpressure/screens/history.dart';
 import 'package:bloodpressure/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -37,7 +38,7 @@ class MainMenu extends StatelessWidget {
               elevatedButton(
                   text: "HISTORIAL DE MEDIDAS",
                   fun: () {
-                    // Get.to(() => MainMenu());
+                    Get.to(() => History());
                   }),
               // const CustomText(text: "O Registrarse"),
               SizedBox(height: Get.width / 1.3),
