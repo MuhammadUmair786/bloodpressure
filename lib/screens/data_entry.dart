@@ -52,24 +52,23 @@ class DataEntry extends StatelessWidget {
                       flex: 5,
                       child: GestureDetector(
                         onTap: () async {
-                          // try {
-                          date = (await showDatePicker(
-                            // currentDate: DateTime.now(),
-                            context: context,
-                            initialDate: DateTime.now(),
-                            firstDate: DateTime.now(),
-                            lastDate: DateTime.now().add(Duration(days: 15)),
-                          ).then((value) {
-                            // print(value);
-                            _dateController.text = Jiffy([value]).yMMMMd;
-                          }))!;
+                          try {
+                            DateTime temp = (await showDatePicker(
+                              // currentDate: DateTime.now(),
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime.now(),
+                              lastDate: DateTime.now().add(Duration(days: 15)),
+                            ).then((value) {
+                              _dateController.text = Jiffy(value).yMMMMd;
+                            }))!;
 
-                          // if (date != null)
-                          //   _dateController.text =
-                          //       Jiffy([date]).yMMMMd;
-                          // } catch (ex) {
-                          //   print(ex);
-                          // }
+                            // if (date != null)
+                            //   _dateController.text =
+                            //       Jiffy([date]).yMMMMd;
+                          } catch (ex) {
+                            print(ex);
+                          }
                         },
                         child: AbsorbPointer(
                             child: TextFormField(
