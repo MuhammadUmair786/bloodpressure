@@ -46,7 +46,7 @@ textFormFeiled(
       // hintStyle: TextStyle(fontSize: 16, color: Colors.black),
       fillColor: Colors.grey[200],
       // filled: true,
-      // errorStyle: TextStyle(fontSize: 18),
+      errorStyle: const TextStyle(fontSize: 15),
       border: const UnderlineInputBorder(),
       // counter: Offstage(),
       // contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 15),
